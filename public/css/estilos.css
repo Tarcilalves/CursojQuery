@@ -43,7 +43,7 @@
     text-align: left;
 }
 .placar {
-    
+    display: none; 
    /* 
    
    text-align: center;
