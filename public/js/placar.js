@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostarPlacar);
+
 function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Seu-nome"
@@ -33,9 +35,31 @@ function novaLinha(usuario,palavras){
 }
 
 
-function removeLinha(event){
-    
-    event.preventDefault(); // previne o comportamento padrão do elemento
-    $(this).parent().parent().remove();
+function removeLinha() {
+    event.preventDefault();
+    var linha = $(this).parent().parent();
 
+    linha.fadeOut(1000);
+    setTimeout(function() {
+        linha.remove();
+    }, 1000);
 }
+
+function mostarPlacar(){ 
+    $(".placar").stop().slideToggle(600);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
