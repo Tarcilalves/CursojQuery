@@ -49,6 +49,29 @@ function finalizaJogo(){
 }
 
 function inicializaMarcadores() {
+    var frase = $(".frase").text().trim();
+    var palavrasFrase = frase.split(" ");
+    campo.on("input", function() {
+        var digitado = campo.val().trim();
+        var palavrasDigitadas = digitado.split(/\s+/);
+        var acertos = 0;
+        for (var i = 0; i < palavrasDigitadas.length; i++) {
+            if (palavrasDigitadas[i] == palavrasFrase[i]) {
+                acertos++;
+            }
+        }
+        if (acertos == palavrasFrase.length) {
+            campo.addClass("borda-verde");
+            campo.removeClass("borda-vermelha");
+        } else {
+            campo.addClass("borda-vermelha");
+            campo.removeClass("borda-verde");
+        }
+    });
+}
+
+
+/*function inicializaMarcadores() {
     var frase = $(".frase").text();
     campo.on("input", function() {
         var digitado = campo.val();
@@ -62,49 +85,9 @@ function inicializaMarcadores() {
             campo.removeClass("borda-verde");
         }
     });
-}
-
-function inserePlacar(){
-    var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Douglas";
-    var numPalavras = $("#contador-palavras").text();    
-
-    var linha = novaLinha(usuario,numPalavras); 
-    linha.find(".botao-remover").click(removeLinha); 
-
-    corpoTabela.prepend(linha);
-}
-
-function novaLinha(usuario,palavras){
-    var linha = $("<tr>");
-    var colunaUsuario = $("<td>").text(usuario);
-    var colunaPalavras = $("<td>").text(Palavras);
-    var colunaRemover = $("<td>");
-
-    var link = $("<a>").attr("href","#").addClass("botao-remover");
-    var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
-
-    // Icone dentro do <a>
-    link.append(icone);
-
-    // <a> dentro do <td>
-    colunaRemover.append(link);
-
-    // Os três <td> dentro do <tr>
-    linha.append(colunaUsuario);
-    linha.append(colunaPalavras);
-    linha.append(colunaRemover);
-
-    return linha;
-}
+}*/
 
 
-function removeLinha(event){
-    
-    event.preventDefault(); // previne o comportamento padrão do elemento
-    $(this).parent().parent().remove();
-
-}
 
 
 function reiniciaJogo() {
