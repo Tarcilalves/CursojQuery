@@ -16,12 +16,11 @@
     
 
 </head>
-<body>
-    <section class="container">
+<body>    
     <header>
-        <h1 class="center">Alura Typer</h1>
+            <h1 class="center">Alura Typer</h1>
     </header>
-    <main>      
+    <main class="container">      
         <section class="informacoes">
             <p class="frase">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, sit? Magni, velit illo distinctio rerum error architecto, hic sed animi ut sit optio in quia consectetur quae fuga. Pariatur, deleniti!</p>
             <ul class="lista-time center ">
@@ -34,48 +33,48 @@
             </ul>
             <p class="frase-chamada center"> Digite a frase o mais rápido possível e veja quantas palavras consegue digitar em 10 segundos.</p>
         </section>    
+        
+        <form>
+            <section class="mb-3">
+                <label for="campo-digitacao" class="form-label">Contator de palavras</label>
+                <textarea class="campo campo-digitacao form-control" id="campo-digitacao" rows="3"></textarea>
+            </section>
+            <section class="botoes">
+                <a id="botao-reiniciar"  class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">restore</i></a>           
+
+            </section>
+            <div class="frase"><h5 class="center">Reinicie o jogo quantas vezes quiser! Desafie seus limites e divirta-se ao máximo!</h5></div>
+        </form>
+        <section>
+            <ul class="informacoes center">
+                <li><span id="contador-caracteres">0</span> Caracteres</li>
+                <li><span id="contador-palavras">0</span> Palavras</li>
+            </ul>
+        </section>
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="table table-bordered table-responsive">
+                <thead class="cabeca table-light">
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">N° de Palavras</th>
+                    <th scope="col">Remover</th>
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <th scope="row">Douglas</th>
+                    <td>10</td>
+                    <td>
+                        <a href="#" class="botao-remover"><i class="small material-icons">delete</i></a>
+                    </td>                
+                  </tr>              
+                </tbody>
+              </table>
+        </section>
+    </main>
     
-   <form>
-        <section class="mb-3">
-            <label for="campo-digitacao" class="form-label">Contator de palavras</label>
-            <textarea class="campo campo-digitacao form-control" id="campo-digitacao" rows="3"></textarea>
-        </section>
-        <section class="botoes">
-            <a id="botao-reiniciar"  class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">restore</i></a>           
-            
-        </section>
-        <div class="frase"><h5 class="center">Reinicie o jogo quantas vezes quiser! Desafie seus limites e divirta-se ao máximo!</h5></div>
-    </form>
-    <section>
-        <ul class="informacoes center">
-            <li><span id="contador-caracteres">0</span> Caracteres</li>
-            <li><span id="contador-palavras">0</span> Palavras</li>
-        </ul>
-    </section>
-    <section class="placar">
-        <h3 class="center">Placar</h3>
-        <table class="table table-bordered table-responsive">
-            <thead class="cabeca table-light">
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">N° de Palavras</th>
-                <th scope="col">Remover</th>
-               </tr>
-            </thead>
-            <tbody>
-              <tr> 
-                <th scope="row">Douglas</th>
-                <td>10</td>
-                <td>
-                    <a href=""><i class="small material-icons">delete</i></a>
-                </td>                
-              </tr>
-              
-            </tbody>
-          </table>
-    </section>
-</main>
-</section>
+
 <footer>
     
 </footer>
