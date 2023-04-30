@@ -1,3 +1,7 @@
+body {
+    overflow: scroll;
+}
+
 
 .campo-digitacao{
     font-size: 20px;
@@ -43,11 +47,6 @@
     text-align: left;
 }
 .placar {
-    display: none; 
-   /* 
-   
-   text-align: center;
-    margin: 0 40%;*/
-    
+    display: none;
 }
 
