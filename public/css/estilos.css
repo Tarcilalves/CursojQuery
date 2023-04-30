@@ -55,3 +55,10 @@ body {
     display: none;
 }
 
+#spinner{
+    display: none;
+}
+
+#frase-id{
+    width: 50px;
+}
