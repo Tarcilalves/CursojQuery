@@ -90,6 +90,7 @@ function atualizaPlacar(){
     $.get("http://localhost:3000/placar",function(data){
         $(data).each(function(){
             var linha = novaLinha(this.usuario, this.pontos);
+            linha.find(".botao-remover").click(removeLinha); 
             $("tbody").append(linha);
         });
     });
