@@ -38,7 +38,7 @@ function buscaFrase(){
     var fraseId = $("#frase-id").val();
     var dados = { id: fraseId};
 
-    $.get("http://localhost:3000/frases", dados,tocaFrase)
+    $.get("http://localhost:3000/frases", dados,trocaFrase)
     .fail(function(){
         $("#erro").show();
         setTimeout(function(){
